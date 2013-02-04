@@ -1,0 +1,18 @@
+
+<p>
+  <b>Name:</b>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @profile.price %>
+</p>
+
+<b>Upgrades:</b><br>
+<% @upgrades.each do |upgrade| %>
+	<%= upgrade.price %><br>
+<% end %>
+<br>
+
+<%= button_to "Reserve Now", lineitems_path(:profile_id => @profile.id) %>

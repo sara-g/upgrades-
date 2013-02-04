@@ -1,0 +1,29 @@
+<%= form_for(@lineitem) do |f| %>
+  <% if @lineitem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lineitem.errors.count, "error") %> prohibited this lineitem from being saved:</h2>
+
+      <ul>
+      <% @lineitem.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :profile_id %><br />
+    <%= f.number_field :profile_id %>
+  </div>
+  <div class="field">
+    <%= f.label :upgrade_id %><br />
+    <%= f.number_field :upgrade_id %>
+  </div>
+  <div class="field">
+    <%= f.label :event_id %><br />
+    <%= f.number_field :event_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

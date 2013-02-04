@@ -1,0 +1,20 @@
+<h2>Vendor Selections</h2>
+<br>
+<% if @line_items.any? %>
+<table class= "table table-hover">
+	
+	<thead>
+		<td>Vendor</td>
+		<td>Fee</td>
+		<td></td>
+	</thead>
+
+	<% @line_items.each do |item| %>
+	<tr>
+		<td><%= item.profile.name %></td>
+		<td><%= number_to_currency(item.profile.price) %></td>
+		<td>
+		</td>
+	</tr>
+	<% end %>
+<% end %>

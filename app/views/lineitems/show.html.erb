@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Profile:</b>
+  <%= @lineitem.profile_id %>
+</p>
+
+<p>
+  <b>Upgrade:</b>
+  <%= @lineitem.upgrade_id %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @lineitem.event_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_lineitem_path(@lineitem) %> |
+<%= link_to 'Back', lineitems_path %>
